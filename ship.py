@@ -15,6 +15,8 @@ class Ship():
         # 移动标志
         self.moving_left = False
         self.moving_right = False
+        self.moving_up = False
+        self.moving_down = False
 
 
         # 将每艘新飞船放在屏幕底部中央
