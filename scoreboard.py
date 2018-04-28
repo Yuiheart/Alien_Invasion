@@ -28,7 +28,8 @@ class Scoreboard():
         self.score_rect.top = 20
 
     def prep_high_score(self):
-        high_score = int(round(self.stats.high_score, -1))
+        with open('high_score_record.txt', 'r') as file_object:
+            high_score = int(round(int(file_object.read()), -1))
         score_str = "{:,}".format(high_score)
         self.high_score_image = self.font.render(score_str, True, self.text_color, self.ai_settings.bg_color)
 
