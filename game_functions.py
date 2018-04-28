@@ -200,7 +200,8 @@ def update_aliens(ai_settings, screen, stats, sb, ship, aliens, bullets):
 #检查最高得分
 def check_high_score(stats, sb):
     if stats.score > stats.high_score:
-        stats.high_score = stats.score
+        with open('high_score_record.txt', 'w') as file_object:
+            file_object.write(str(stats.score))
         sb.prep_high_score()
 
 

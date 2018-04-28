@@ -30,7 +30,7 @@ def run_game():
     aliens = Group()
 
     # 创建外星人群
-    gf.create_fleet(ai_settings, screen, ship, aliens)
+    gf.create_fleet(ai_settings, screen,  ship, aliens)
 
     # 创建游戏状态对象
     stats = GameStats(ai_settings)

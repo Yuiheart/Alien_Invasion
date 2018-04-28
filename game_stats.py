@@ -3,7 +3,8 @@ class GameStats():
         self.ai_settings = ai_settings
         self.reset_stats()
         self.game_active = False
-        self.high_score = 0
+        with open('high_score_record.txt', 'r') as file_object:
+            self.high_score = int(file_object.read())
 
     def reset_stats(self):
         self.ships_left = self.ai_settings.ship_limit
